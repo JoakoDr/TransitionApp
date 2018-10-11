@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">transitionTarea</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="surname2">Surname 2</string>
+    <string name="birthday">birthday</string>
+    <string name="address">address</string>
+    <string name="postalcode">postalcode</string>
+    <string name="city">City</string>
+    <string name="phonetype">Phonetype</string>
+    <string name="phone">phone</string>
 </resources>

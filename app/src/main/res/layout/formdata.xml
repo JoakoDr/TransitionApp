@@ -1,6 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ScrollView
+        android:layout_width="351dp"
+        android:layout_height="495dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editText4"
+                    android:layout_width="168dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/surname" />
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editText9"
+                    android:layout_width="152dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/surname2" />
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edittelf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/birthday" />
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/address" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editpostalcode"
+                    android:layout_width="168dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/postalcode" />
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editcity"
+                    android:layout_width="152dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/city" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editphonetype"
+                    android:layout_width="168dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/phonetype" />
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editphone"
+                    android:layout_width="152dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/phone" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="307dp"
+                android:layout_height="34dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="105dp"
+                android:background="@drawable/button_login_selector"
+                android:onClick="onLoginAction"
+                android:text="LOGIN" />
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>
