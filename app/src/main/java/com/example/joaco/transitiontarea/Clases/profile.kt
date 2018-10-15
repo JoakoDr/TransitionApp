@@ -20,7 +20,7 @@ class profile : AppCompatActivity() {
         phoneView.setText(getIntent().getExtras().getString("phone"))
         typeView.setText(getIntent().getExtras().getString("typephone"))
         emailView.setText(getIntent().getExtras().getString("email"))
-        imageView2.setImageResource(getIntent().getExtras().getInt("image"))
+//        imageView2.setImageResource(getIntent().getExtras().getInt("image"))
 
     }
 }
