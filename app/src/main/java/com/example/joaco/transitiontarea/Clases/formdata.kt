@@ -1,10 +1,11 @@
-package com.example.joaco.transitiontarea
+package com.example.joaco.transitiontarea.Clases
 
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.joaco.transitiontarea.R
 
 class formdata : Activity()
 {
