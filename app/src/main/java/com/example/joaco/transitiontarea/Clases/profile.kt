@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.profile.*
 class profile : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_log_in)
+        setContentView(R.layout.profile)
         nameViewP.setText(getIntent().getExtras().getString("name"))
         surnameViewP.setText(getIntent().getExtras().getString("surname"))
         surname2ViewP.setText(getIntent().getExtras().getString("surname2"))
@@ -20,7 +20,8 @@ class profile : AppCompatActivity() {
         phoneView.setText(getIntent().getExtras().getString("phone"))
         typeView.setText(getIntent().getExtras().getString("typephone"))
         emailView.setText(getIntent().getExtras().getString("email"))
-        imageView2.setImageResource(getIntent().getExtras().getInt("image"))
+//        imageView2.setImageResource(getIntent().getExtras().getInt("image"))
+
 
     }
 }

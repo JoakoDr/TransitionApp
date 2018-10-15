@@ -31,6 +31,19 @@ class personaldata : Activity() {
 
     }
 
+    fun onRadioButtonClicked(view: View) {
+        // Is the button now checked?
+        val checked = (view as RadioButton).isChecked
+
+        // Check which radio button was clicked
+        when (view.getId()) {
+            R.id.radio_pirates -> if (checked)
+                Toast.makeText(this, "¡Has pulsado Male!", Toast.LENGTH_SHORT).show()
+            R.id.radio_ninjas -> if (checked)
+                Toast.makeText(this, "¡Has pulsado Female!", Toast.LENGTH_SHORT).show()
+        }// Males are the bests
+        // femalessss
+    }
 
     fun onCheckboxClicked(view: View) {
         if (view is CheckBox) {
@@ -46,7 +59,7 @@ class personaldata : Activity() {
                 }
                 R.id.checkbox_hobbie2 -> {
                     if (checked) {
-                        // Cheese me
+                        // Love soccer
                     } else {
                         // I'm lactose intolerant
                     }
@@ -93,7 +106,7 @@ class personaldata : Activity() {
 
     }
     fun onLoginAction2(view: View) {
-        Toast.makeText(this, "next", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "back", Toast.LENGTH_SHORT).show()
         val intent1 = Intent(this, formdata::class.java)
         startActivity(intent1)
 
