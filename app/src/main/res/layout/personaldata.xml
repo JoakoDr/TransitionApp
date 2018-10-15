@@ -25,7 +25,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal">
             <Button
                 android:id="@+id/imagebutton"
                 android:layout_width="76dp"
@@ -33,7 +33,62 @@
 
                 android:background="@drawable/image_selector"
                 android:onClick="addButtonListener" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:orientation="vertical">
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="125dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="8dp"
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="textEmailAddress"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.053" />
+                    <EditText
+                        android:id="@+id/surname"
+                        android:layout_width="125dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="8dp"
+                        android:ems="10"
+                        android:hint="Nombre"
+                        android:inputType="textEmailAddress"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.053" />
+                </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                tools:layout_editor_absoluteX="66dp"
+                tools:layout_editor_absoluteY="180dp" />
+
+
         </LinearLayout>
 
     </ScrollView>
+
+
 </android.support.constraint.ConstraintLayout>
