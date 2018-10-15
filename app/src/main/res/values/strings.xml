@@ -9,4 +9,10 @@
     <string name="city">City</string>
     <string name="phonetype">Phonetype</string>
     <string name="phone">phone</string>
+    <string-array name="PhoneType">
+        <item>Home</item>
+        <item>Mobile</item>
+        <item>Work</item>
+
+    </string-array>
 </resources>
