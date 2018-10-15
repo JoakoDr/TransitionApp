@@ -7,14 +7,14 @@
     android:layout_height="match_parent">
 
     <ScrollView
-        android:layout_width="351dp"
-        android:layout_height="495dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="502dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.47"
@@ -24,18 +24,22 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"><Button
-                android:id="@+id/imagebutton"
-                android:layout_width="76dp"
-                android:layout_height="74dp"
+                android:orientation="horizontal">
 
-                android:background="@drawable/image_selector"
-                android:onClick="addButtonListener" />
+                <Button
+                    android:id="@+id/imagebutton"
+                    android:layout_width="76dp"
+                    android:layout_height="74dp"
+
+                    android:background="@drawable/image_selector"
+                    android:onClick="addButtonListener" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
@@ -50,7 +54,8 @@
                         android:layout_marginEnd="30dp"
                         android:layout_marginBottom="8dp"
                         android:ems="10"
-                        android:hint="Nombre"
+                        android:hint="@string/nombre"
+                        android:importantForAutofill="no"
                         android:inputType="textEmailAddress"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -68,14 +73,17 @@
                         android:layout_marginBottom="8dp"
                         android:ems="10"
                         android:hint="Name"
+                        android:importantForAutofill="no"
                         android:inputType="textEmailAddress"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.053" /></LinearLayout>
+                        app:layout_constraintVertical_bias="0.053" />
+                </LinearLayout>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -84,13 +92,118 @@
                 <EditText
                     android:id="@+id/editText"
                     android:layout_width="match_parent"
-                    android:layout_height="153dp"
+                    android:layout_height="56dp"
                     android:ems="10"
+                    android:importantForAutofill="no"
                     android:inputType="textMultiLine"
                     tools:layout_editor_absoluteX="66dp"
                     tools:layout_editor_absoluteY="180dp" />
 
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="59dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Gender"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.084"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.439" />
 
+
+                <RadioGroup
+                    android:layout_width="339dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.104"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.561">
+
+                    <RadioButton
+                        android:id="@+id/radio_pirates"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="Female" />
+
+                    <RadioButton
+                        android:id="@+id/radio_ninjas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="Male" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/txt_hobbies"
+                    android:layout_width="59dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Hobbies"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.084"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.439" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_hobbie1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onCheckboxClicked"
+                    android:text="@string/hobbie1" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_hobbie2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onCheckboxClicked"
+                    android:text="@string/hobbie2" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_hobbie3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onCheckboxClicked"
+                    android:text="@string/hobbie3" />
+
+                <Button
+                    android:id="@+id/SaveButton"
+                    android:layout_width="307dp"
+                    android:layout_height="34dp"
+                    android:background="@drawable/button_login_selector"
+                    android:onClick="onLoginAction"
+                    android:text="Save" />
+
+                <Button
+                    android:id="@+id/CancelButton"
+                    android:layout_width="307dp"
+                    android:layout_height="34dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="5dp"
+
+                    android:background="@drawable/button_login_selector"
+                    android:onClick="onLoginAction"
+                    android:text="Cancel" />
             </LinearLayout>
 
         </LinearLayout>
