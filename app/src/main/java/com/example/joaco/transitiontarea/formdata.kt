@@ -13,11 +13,11 @@ class formdata : Activity()
         setContentView(R.layout.formdata)
 
     }
-    fun onLoginAction(view: View) {
+    fun onLoginAction1(view: View) {
         Toast.makeText(this, "on login pressed", Toast.LENGTH_SHORT).show()
-        val intent = Intent(this@formdata, personaldata::class.java)
+        val intent1 = Intent(this@formdata, personaldata::class.java)
         setContentView(R.layout.personaldata)
-        startActivity(intent)
+        startActivity(intent1)
 
     }
 }
