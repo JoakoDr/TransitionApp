@@ -22,6 +22,8 @@
                   </activity>
         <activity android:name=".Clases.personaldata">
         </activity>
+         <activity android:name=".Clases.profile">
+        </activity>
     </application>
 
 </manifest>
