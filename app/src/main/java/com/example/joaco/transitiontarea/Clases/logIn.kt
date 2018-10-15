@@ -33,6 +33,7 @@ class logIn : AppCompatActivity() {
         {
             Toast.makeText(this, "Log OK", Toast.LENGTH_SHORT).show()
             val intent = Intent(this@logIn, formdata::class.java)
+            intent.putExtra("email",editText3.text.toString())
             startActivity(intent)
         }
     }

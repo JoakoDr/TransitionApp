@@ -8,6 +8,8 @@ import android.content.Intent
 import android.net.Uri
 import android.provider.MediaStore
 import android.widget.*
+import kotlinx.android.synthetic.main.formdata.*
+import kotlinx.android.synthetic.main.personaldata.*
 
 
 class personaldata : Activity() {
@@ -71,5 +73,29 @@ class personaldata : Activity() {
             imageUrl = data.data
             photoGallery!!.setImageURI(imageUrl)
         }
+    }
+    fun onLoginAction1(view: View) {
+        Toast.makeText(this, "next", Toast.LENGTH_SHORT).show()
+        val intent1 = Intent(this, profile::class.java)
+        intent1.putExtra("email",getIntent().getExtras().getString("email"))
+        intent1.putExtra("name",getIntent().getExtras().getString("name"))
+        intent1.putExtra("surname", getIntent().getExtras().getString("surname"))
+        intent1.putExtra("surname2", getIntent().getExtras().getString("surname2"))
+        intent1.putExtra("birthday", getIntent().getExtras().getString("birthday"))
+        intent1.putExtra("address", getIntent().getExtras().getString("address"))
+        intent1.putExtra("postal", getIntent().getExtras().getString("postal"))
+        intent1.putExtra("city", getIntent().getExtras().getString("city"))
+        intent1.putExtra("typephone", getIntent().getExtras().getString("typephone"))
+        intent1.putExtra("phone", getIntent().getExtras().getString("phone"))
+        intent1.putExtra("image", imagebutton.id)
+        intent1.putExtra("interesPerso", intperson.text.toString())
+        startActivity(intent1)
+
+    }
+    fun onLoginAction2(view: View) {
+        Toast.makeText(this, "next", Toast.LENGTH_SHORT).show()
+        val intent1 = Intent(this, formdata::class.java)
+        startActivity(intent1)
+
     }
 }
