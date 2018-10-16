@@ -2,10 +2,14 @@ package com.example.joaco.transitiontarea.Clases
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.View
+import android.widget.TextView
 import com.example.joaco.transitiontarea.R
 import kotlinx.android.synthetic.main.profile.*
 
 class profile : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.profile)
@@ -20,6 +24,10 @@ class profile : AppCompatActivity() {
         phoneView.setText(getIntent().getExtras().getString("phone"))
         typeView.setText(getIntent().getExtras().getString("typephone"))
         emailView.setText(getIntent().getExtras().getString("email"))
+        hobby1View.setText(getIntent().getExtras().getString("Golf"))
+        hobby2View.setText("Soccer")
+        genderViewP.setText(getIntent().getExtras().getString("gender"))
+
 //        imageView2.setImageResource(getIntent().getExtras().getInt("image"))
 
 

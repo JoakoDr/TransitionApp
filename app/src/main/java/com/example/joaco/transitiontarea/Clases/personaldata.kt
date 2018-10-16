@@ -8,8 +8,12 @@ import android.content.Intent
 import android.net.Uri
 import android.provider.MediaStore
 import android.widget.*
+import com.example.joaco.transitiontarea.User.User
 import kotlinx.android.synthetic.main.formdata.*
 import kotlinx.android.synthetic.main.personaldata.*
+import android.widget.TextView
+import com.example.joaco.transitiontarea.R.string.surname2
+import kotlinx.android.synthetic.main.profile.*
 
 
 class personaldata : Activity() {
@@ -17,6 +21,9 @@ class personaldata : Activity() {
     internal var button: Button? = null
     var photoGallery: ImageView? = null
     var imageUrl: Uri? = null
+    var objUser: User? = null
+
+
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +46,7 @@ class personaldata : Activity() {
         when (view.getId()) {
             R.id.radio_pirates -> if (checked)
                 Toast.makeText(this, "¡Has pulsado Male!", Toast.LENGTH_SHORT).show()
+
             R.id.radio_ninjas -> if (checked)
                 Toast.makeText(this, "¡Has pulsado Female!", Toast.LENGTH_SHORT).show()
         }// Males are the bests
@@ -53,22 +61,26 @@ class personaldata : Activity() {
                 R.id.checkbox_hobbie1 -> {
                     if (checked) {
                         // Love golf
+                        checkbox_hobbie1.text.toString()
+
                     } else {
-                        // Remove the meat
+                        // Remove
                     }
                 }
                 R.id.checkbox_hobbie2 -> {
                     if (checked) {
                         // Love soccer
+                        checkbox_hobbie2.text.toString()
                     } else {
-                        // I'm lactose intolerant
+                        // ermove
                     }
                 }
                 R.id.checkbox_hobbie3 -> {
                     if (checked) {
-                        // Cheese me
+                        // lol
+                        checkbox_hobbie3.text.toString()
                     } else {
-                        // I'm lactose intolerant
+                        //
                     }
                 }
                 // TODO: Veggie sandwich
@@ -102,6 +114,10 @@ class personaldata : Activity() {
         intent1.putExtra("phone", getIntent().getExtras().getString("phone"))
         intent1.putExtra("image", imagebutton.id)
         intent1.putExtra("interesPerso", intperson.text.toString())
+        intent1.putExtra("Golf", checkbox_hobbie1.text.toString())
+        intent1.putExtra("radio_pirates", radio_pirates.text.toString())
+        intent1.putExtra("radio_ninjas", radio_ninjas.text.toString())
+        intent1.putExtra("gender", genderViewP.text.toString())
         startActivity(intent1)
 
     }

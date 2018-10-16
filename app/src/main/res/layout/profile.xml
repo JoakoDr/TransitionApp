@@ -10,10 +10,13 @@
         android:id="@+id/imageView2"
         android:layout_width="83dp"
         android:layout_height="92dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="28dp"
+        android:contentDescription="TODO"
         app:layout_constraintBottom_toTopOf="@+id/descView"
         app:layout_constraintEnd_toStartOf="@+id/surnameViewP"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,9 +32,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="24dp"
         android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/surnameViewP"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="parent" />
@@ -40,12 +41,12 @@
         android:id="@+id/surnameViewP"
         android:layout_width="116dp"
         android:layout_height="16dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginLeft="19dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="4dp"
         android:text="Surname"
-        app:layout_constraintEnd_toStartOf="@+id/surname2ViewP"
-        app:layout_constraintTop_toBottomOf="@+id/nameViewP"
-        android:layout_marginRight="4dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/nameViewP" />
 
     <TextView
         android:id="@+id/surname2ViewP"
@@ -64,9 +65,7 @@
         android:layout_marginStart="23dp"
         android:layout_marginLeft="23dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="25dp"
         android:text="Age"
-        app:layout_constraintBottom_toTopOf="@+id/descView"
         app:layout_constraintEnd_toStartOf="@+id/genderViewP"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/surnameViewP" />
@@ -86,15 +85,12 @@
         android:id="@+id/descView"
         android:layout_width="353dp"
         android:layout_height="103dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginRight="16dp"
         android:text="Descripcion"
-        app:layout_constraintBottom_toTopOf="@+id/lblAddress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/ageView" />
 
     <TextView
         android:id="@+id/lblAddress"
